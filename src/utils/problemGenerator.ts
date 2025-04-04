@@ -124,7 +124,7 @@ const generateDivisionProblem = (grade: number): Pick<Problem, 'num1' | 'num2'> 
 };
 
 // Main function to generate a single problem
-export const generateProblem = (settings: Settings, previousOperation?: Operation): Problem => {
+export const generateProblem = (settings: Settings, _previousOperation?: Operation): Problem => {
   // Get available operations based on settings
   const operations = getEnabledOperations(settings);
   
