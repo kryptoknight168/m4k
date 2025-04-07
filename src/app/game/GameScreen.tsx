@@ -88,12 +88,12 @@ const GameScreen: React.FC = () => {
           <div className="text-center text-xl font-semibold mb-2">
             Problem {currentProblemIndex + 1} of {totalProblems}
           </div>
-          <Progress
+          {<Progress
             currentProblem={currentProblemIndex}
             totalProblems={totalProblems}            
             timeRemaining={time}
             timePerProblem={settings.timerSeconds}
-          />
+          /> }
         </div>
         
         {/* Problem display */}
@@ -133,4 +133,4 @@ const GameScreen: React.FC = () => {
   );
 };
 
-export default GameScreen; 
+export default GameScreen;

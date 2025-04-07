@@ -69,12 +69,34 @@ const generateAdditionProblem = (grade: number): Pick<Problem, 'num1' | 'num2'> 
 };
 
 const generateSubtractionProblem = (grade: number): Pick<Problem, 'num1' | 'num2'> => {
-  // Allow negative answers by not enforcing num1 >= num2
-  const addition = generateAdditionProblem(grade);
+  switch (grade) {
+    case 4:
+      return {
+        num1: getRandomInt(10, 50),
+        num2: getRandomInt(1, 10),
+      };
+    case 5:
+      return {
+        num1: getRandomInt(50, 200),
+        num2: getRandomInt(10, 50),
+      };
+    case 6:
+      return {
+        num1: getRandomInt(100, 500),
+        num2: getRandomInt(50, 100),
+      };
+    case 7:
+    case 8:
+      return {
+        num1: getRandomInt(200, 999),
+        num2: getRandomInt(100, 200),
+      };
+    default:
   return { 
-    num1: addition.num1, 
-    num2: addition.num2 
+        num1: getRandomInt(10, 20),
+        num2: getRandomInt(1, 10),
   };
+  }
 };
 
 const generateMultiplicationProblem = (grade: number): Pick<Problem, 'num1' | 'num2'> => {
