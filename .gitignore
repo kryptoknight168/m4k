@@ -45,3 +45,5 @@ build/
 *.swp
 *.swo
 Thumbs.db
+
+.vercel
