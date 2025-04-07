@@ -11,7 +11,7 @@ interface ProblemProps {
 const Problem: React.FC<ProblemProps> = ({ problem, showFeedback, feedbackType }) => {
   if (!problem) return null;
   
-  const { num1, num2, operation, answer: _answer } = problem;
+  const { num1, num2, operation } = problem;
   
   // Format numbers (whole numbers or up to 2 decimal places)
   const formatNumber = (num: number): string => {
