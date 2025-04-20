@@ -6,11 +6,9 @@ interface ProblemProps {
   problem: ProblemType;
   showFeedback: boolean;
   feedbackType: 'correct' | 'incorrect';
-  // @ts-ignore: Unused variable warning
-  answer?: number;
 }
 
-const Problem: React.FC<ProblemProps> = ({ problem, showFeedback, feedbackType, answer }) => {
+const Problem: React.FC<ProblemProps> = ({ problem, showFeedback, feedbackType }) => {
   if (!problem) return null;
   
   const { num1, num2, operation } = problem;
