@@ -14,9 +14,7 @@ const Progress: React.FC<ProgressProps> = ({
   timeRemaining,
   timePerProblem,
 }) => {
-  // Calculate progress percentage
-  const progressPercentage = ((currentProblem + 1) / totalProblems) * 100;
-  
+
   // Calculate time percentage
   const timePercentage = (timeRemaining / timePerProblem) * 100;
   
@@ -40,16 +38,6 @@ const Progress: React.FC<ProgressProps> = ({
             Time: {formatTime(timeRemaining)}
           </span>
         )}
-      </div>
-      
-      {/* Problem progress bar */}
-      <div className="h-2 bg-gray-200 rounded-full overflow-hidden mb-2">
-        <motion.div
-          className="h-full bg-blue-600"
-          initial={{ width: 0 }}
-          animate={{ width: `${progressPercentage}%` }}
-          transition={{ ease: "easeOut", duration: 0.5 }}
-        />
       </div>
       
       {/* Timer progress bar (only if timer is enabled) */}
