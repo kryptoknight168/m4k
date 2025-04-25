@@ -47,8 +47,8 @@ const GameScreen: React.FC = () => {
   }, [isGameOver, navigate]);
   
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-blue-100 to-purple-100">
-      <div className="w-full max-w-3xl mx-auto relative">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-white">
+      <div className="w-full max-w-4xl mx-auto text-center">
         {/* Quit button */}
         <div className="absolute -top-16 right-0">
           <button 

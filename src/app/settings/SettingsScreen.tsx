@@ -27,11 +27,12 @@ const SettingsScreen: React.FC = () => {
 
   // Check if at least one operation is selected
   const isStartDisabled = !Object.values(settings.operations).some(value => value === true);
-
+// 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-white">
-      <AnimatedContainer animation="fade" className="w-full max-w-md">
-        <div className="bg-white rounded-xl shadow-lg p-6 w-full">
+      <div className="w-full max-w-4xl mx-auto text-center">
+        <AnimatedContainer animation="fade" className="w-full">
+        <div className="bg-white rounded-xl p-6 w-full">
           <h1 className="text-3xl font-bold text-center text-blue-700 mb-6">Game Settings</h1>
           
           <div className="space-y-6">
@@ -75,6 +76,7 @@ const SettingsScreen: React.FC = () => {
           </div>
         </div>
       </AnimatedContainer>
+      </div>
     </div>
   );
 };

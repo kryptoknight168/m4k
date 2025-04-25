@@ -110,8 +110,6 @@ const ResultsScreen: React.FC = () => {
   
     return (
     <>
-      {/* Confetti Canvas - must be present for confetti to show */}
-      <canvas ref={confettiCanvasRef} className="fixed inset-0 pointer-events-none z-50" />
       {/* Confetti Canvas - fixed, covers viewport, pointerEvents none */}
       <canvas
         ref={confettiCanvasRef}
@@ -126,12 +124,12 @@ const ResultsScreen: React.FC = () => {
         }}
         width={typeof window !== 'undefined' ? window.innerWidth : 1920}
         height={typeof window !== 'undefined' ? window.innerHeight : 1080}
-      />
-      <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-gradient-to-b from-blue-100 to-purple-100">
-        <div className="w-full max-w-4xl px-4 text-center">
+      />// 
+      <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-white">
+        <div className="w-full max-w-4xl mx-auto text-center w-full">
           <motion.div 
             ref={cardRef}
-            className="bg-white rounded-xl shadow-lg p-6"
+            className="bg-white rounded-xl shadow-lg p-6 w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
           >
